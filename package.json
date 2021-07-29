@@ -1,0 +1,19 @@
+{
+  "name": "SelectFilter",
+  "version": "1.0.0",
+  "description": "Your Figma plugin",
+  "main": "code.js",
+  "scripts": {
+    "start": "tsc -w -p tsconfig.json",
+    "build": "tsc -p tsconfig.json"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.28.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "figma-plugin-ds": "^1.0.1"
+  }
+}
