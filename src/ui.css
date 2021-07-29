@@ -6,3 +6,6 @@
 #selection button {
   text-align: left;
 }
+.container {
+  display: contents;
+}

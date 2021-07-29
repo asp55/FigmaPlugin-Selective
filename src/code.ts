@@ -47,8 +47,10 @@ figma.on("selectionchange", ()=>{
   else skipNextSelectionChange = false;
 })
 figma.ui.onmessage = (message,props)=>{
-  //console.log(message, props);
-  if(message.command==="Filter") {
+  console.log("Received Message From UI", message, props);
+
+  if(message.type==="Filter") {
+    console.log("Filter", message);
     const props = message.props;
     skipNextSelectionChange = true;
     if(props.by==="Name") {
@@ -72,7 +74,7 @@ figma.ui.onmessage = (message,props)=>{
             return (n.mainComponent.name===props.component.varient && n.mainComponent.parent.name===props.component.name);
           }
           else {
-            return (n.mainComponent.name===props.component.name || n.mainComponent.parent.name===props.component.name);
+            return (n.mainComponent.name===props.component.name || (n.mainComponent.parent && n.mainComponent.parent.name===props.component.name));
           }
           
         }
