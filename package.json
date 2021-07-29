@@ -1,7 +1,7 @@
 {
-  "name": "SelectFilter",
+  "name": "selective",
   "version": "1.0.0",
-  "description": "Your Figma plugin",
+  "description": "Filter down your selection for batch editing",
   "main": "code.js",
   "scripts": {
     "start": "tsc -w -p tsconfig.json",
