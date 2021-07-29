@@ -1,31 +1,9 @@
-<link rel="stylesheet" href="./node_modules/figma-plugin-ds/dist/figma-plugin-ds.css">
-<style>
-  #selection {
-    display: grid;
-    grid-template-columns:  1fr;
-    grid-auto-rows: max-content;
-  }
-  #selection button {
-    text-align: left;
-  }
-</style>
-
-<div id="filterby">
-  <input type="radio" name="filter" id="filter-by-name" value="0" checked/> <label for="filter-by-name">Name</label>
-  <input type="radio" name="filter" id="filter-by-type" value="1"/> <label for="filter-by-type">Type</label>
-</div>
-<div id="selection">
-
-</div>
-
-<script>
-  //Initialize Variables
 let mode = 0;
 let selection = [];
 const selectionControl = document.getElementById("selection");
 
 function setMode() {
-  mode = Number(document.querySelector('[name="filter"]:checked').value);
+  mode = Number(document.querySelector('input[name="filter"]:checked').value);
   parseSelection();
 }
 setMode();
@@ -154,5 +132,3 @@ onmessage = (event)=>{
     parseSelection();
   }
 }
-
-</script>

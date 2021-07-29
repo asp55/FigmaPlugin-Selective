@@ -1,0 +1,8 @@
+#selection {
+  display: grid;
+  grid-template-columns:  1fr;
+  grid-auto-rows: max-content;
+}
+#selection button {
+  text-align: left;
+}

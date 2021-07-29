@@ -4,14 +4,22 @@
   "description": "Filter down your selection for batch editing",
   "main": "code.js",
   "scripts": {
-    "start": "tsc -w -p tsconfig.json",
-    "build": "tsc -p tsconfig.json"
+    "start": "npx webpack --mode=development --watch",
+    "build": "npx webpack --mode=production"
   },
   "author": "",
   "license": "",
   "devDependencies": {
     "@figma/plugin-typings": "^1.28.0",
-    "typescript": "^4.3.5"
+    "css-loader": "^6.2.0",
+    "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.4",
+    "typescript": "^4.3.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.47.0",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
     "figma-plugin-ds": "^1.0.1"
